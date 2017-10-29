@@ -3,7 +3,6 @@
 
 # ...But these files
 !.gitignore
-
 !.vimrc
 !.zshrc
 
