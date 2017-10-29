@@ -204,6 +204,7 @@ bar {
 	status_command i3blocks -c /home/florian/.config/i3/i3blocks.conf
 	tray_output DP2-3
 	font pango:System San Francisco Display 8
+	separator_symbol " "
 	colors {
 		background	$bg-color
 		separator	#757575
