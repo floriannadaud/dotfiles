@@ -12,8 +12,6 @@ setlocal tabstop=2
 filetype off
 autocmd vimenter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-:imap ;; <Esc>
-:map ;; <Esc>
 
 " If installed using git
 set rtp+=~/.fzf
