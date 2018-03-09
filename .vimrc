@@ -10,8 +10,8 @@ syntax on
 setlocal shiftwidth=2
 setlocal tabstop=2
 filetype off
-autocmd vimenter * NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd vimenter * NERDTree
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " If installed using git
 set rtp+=~/.fzf
@@ -28,6 +28,6 @@ Plugin 'VundleVim/Vundle.vim'
 " Bundles pour puppet
 Plugin 'godlygeek/tabular'
 Plugin 'rodjek/vim-puppet'
-Plugin 'nerdtree'
+" Plugin 'nerdtree'
 call vundle#end()            " required
 filetype plugin indent on    " required
