@@ -1,6 +1,7 @@
 [global_config]
   enabled_plugins = InactivityWatch, ActivityWatch, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
   inactive_color_offset = 1.0
+  suppress_multiple_term_dialog = True
   title_inactive_bg_color = "#2f343f"
   title_inactive_fg_color = "#676e7d"
   title_receive_bg_color = "#1fa67a"
