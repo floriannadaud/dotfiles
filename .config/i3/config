@@ -98,6 +98,8 @@ bindsym $mod+q focus parent
 #exec --no-startup-id '~/.screenlayout/screenLayout_new.sh'
 #exec_always xrandr --output VIRTUAL1 --off --output eDP1 --off --output DP1 --off --output DP2-1 --off --output DP2-2 --mode 1920x1080 --pos 1920x0 --rotate normal --output DP2-3 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI2 --off --output HDMI1 --off --output DP2 --off
 
+exec_always "xrandr --output DP2-2 --right-of DP2-3 --auto --output eDP1 --off"
+
 set $workspace1 "1 "
 set $workspace2 "2 "
 set $workspace3 "3  "
@@ -237,14 +239,18 @@ exec_always feh --bg-scale  --no-xinerama /home/florian/images/wallpaper.jpg
 # Compton enable i3 transparence
 exec --no-startup-id compton -f -D 2 -cCGb --backend glx --vsync opengl
 # Autolocking screen and screensaver
-exec xautolock -time 3 -locker '/usr/local/bin/lock'
+exec xautolock -time 3 -corners +0-0 -locker '/usr/local/bin/lock'
 exec xset dpms 300
 # Managing shutdown
 bindsym $mod+Delete exec '/usr/local/bin/i3exit'
 for_window [class="I3-exit"] floating enable border normal
+
+# Enable floating mode for pop-up windows
+for_window [window_role="pop-up"] floating enable border normal
 
 exec  google-chrome
 exec  thunderbird 
 
 # Keepass autocomplete
 bindsym Ctrl+Shift+a exec "/usr/bin/keepass2 --auto-type"
+
